@@ -208,16 +208,16 @@ int main(){
 	// n6->next = NULL;
 	Node *head = takeInput2();
 	print_LL(head);
-// 	head = insertNode(head,0,99);
-// 	print_LL(head);
-// 	head = insertNode(head,2,100);
-// 	print_LL(head);
-// 	head = insertNode(head,9,200);
-// 	print_LL(head);
-// 	head = deleteNodeRec(head,2);
-// 	print_LL(head);
-// 	head = insertNodeRec(head,2,100);
-// 	print_LL(head);
+	head = insertNode(head,0,99);
+	print_LL(head);
+	head = insertNode(head,2,100);
+	print_LL(head);
+	head = insertNode(head,9,200);
+	print_LL(head);
+	head = deleteNodeRec(head,2);
+	print_LL(head);
+	head = insertNodeRec(head,2,100);
+	print_LL(head);
 	head = append_LinkedList(head,3);
 	print_LL(head);
 }
