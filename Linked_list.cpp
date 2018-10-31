@@ -173,29 +173,31 @@ int Node_Search(Node *head, int n) {
   }
   return -1;
 }
-Node* append_LinkedList(Node* head,int n){
-	int i=1;
-	int len = length_LL(head);
-	int count = len - n;
-	Node *temp = head;
-	Node *head2 = head;
-	while(i<count || temp!=NULL){
-		++i;
-		temp = temp->next;
-	}
-	if(temp!=NULL){
-		head2 = temp->next;
-		temp->next = NULL;
-		Node *temp2 = head2;
-		while(temp2!=NULL){
-			temp2 = temp2->next;
-		}
-		Node* tail = temp2;
-		head = tail->next;
-		return head2;
-	}
-	return head;
-}
+//Incorrect
+
+// Node* append_LinkedList(Node* head,int n){
+// 	int i=1;
+// 	int len = length_LL(head);
+// 	int count = len - n;
+// 	Node *temp = head;
+// 	Node *head2 = head;
+// 	while(i<count || temp!=NULL){
+// 		++i;
+// 		temp = temp->next;
+// 	}
+// 	if(temp!=NULL){
+// 		head2 = temp->next;
+// 		temp->next = NULL;
+// 		Node *temp2 = head2;
+// 		while(temp2!=NULL){
+// 			temp2 = temp2->next;
+// 		}
+// 		Node* tail = temp2;
+// 		head = tail->next;
+// 		return head2;
+// 	}
+// 	return head;
+// }
 int main(){
 	// Node n1(1),n2(2);
 	// n1.next = &n2;
@@ -206,16 +208,16 @@ int main(){
 	// n6->next = NULL;
 	Node *head = takeInput2();
 	print_LL(head);
-	// head = insertNode(head,0,99);
-	// print_LL(head);
-	// head = insertNode(head,2,100);
-	// print_LL(head);
-	// head = insertNode(head,9,200);
-	// print_LL(head);
-	// head = deleteNodeRec(head,2);
-	// print_LL(head);
-	// head = insertNodeRec(head,2,100);
-	// print_LL(head);
+// 	head = insertNode(head,0,99);
+// 	print_LL(head);
+// 	head = insertNode(head,2,100);
+// 	print_LL(head);
+// 	head = insertNode(head,9,200);
+// 	print_LL(head);
+// 	head = deleteNodeRec(head,2);
+// 	print_LL(head);
+// 	head = insertNodeRec(head,2,100);
+// 	print_LL(head);
 	head = append_LinkedList(head,3);
 	print_LL(head);
 }
